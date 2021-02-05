@@ -8,7 +8,7 @@
   <p>api 数据：{{ state.message }}</p>
   <p>mock 数据：{{ state.user }}</p>
   <h1>UI components</h1>
-  <ui-button>default</ui-button>&nbsp; <ui-button type="primary">primary</ui-button>&nbsp;
+  <ui-button size="large">default</ui-button>&nbsp; <ui-button type="primary">primary</ui-button>&nbsp;
   <ui-button to="/about">跳转到关于我们</ui-button>
 </template>
 

@@ -7,6 +7,8 @@ import { classNames } from '../types'
 
 export type UiButtonTypes = 'primary' | 'success' | 'warning' | 'danger'
 
+export type UiButtonSizes = 'large' | 'normal' | 'small' | 'mini'
+
 export type UiButtonNativeTypes = 'button' | 'submit' | 'reset'
 
 const UiButton = defineComponent({
@@ -15,6 +17,10 @@ const UiButton = defineComponent({
   props: {
     type: {
       type: String as PropType<UiButtonTypes>,
+      required: false,
+    },
+    size: {
+      type: String as PropType<UiButtonSizes>,
       required: false,
     },
     text: {
@@ -39,13 +45,15 @@ const UiButton = defineComponent({
     },
   },
   setup(props, { attrs, slots }) {
-    const { getPrefixCls } = inject('configProvider', defaultConfigProvider)
+    const { getPrefixCls, size } = inject('configProvider', defaultConfigProvider)
     const prefixCls = getPrefixCls('button')
 
     return () => {
+      const btnSize = props.size || size
       const classList: classNames = [
         prefixCls,
         {
+          [`${prefixCls}--${btnSize}`]: !!btnSize,
           [`${prefixCls}--${props.type || 'default'}`]: true,
         },
       ]

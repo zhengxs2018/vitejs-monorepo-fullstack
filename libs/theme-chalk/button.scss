@@ -4,7 +4,7 @@
 @include component('button', $ui-prefix) {
   display: inline-block;
   margin: 0;
-  padding: 12px 20px;
+  padding: 2px 6px;
   cursor: pointer;
 
   line-height: 1;
@@ -27,13 +27,18 @@
   border-radius: 4px;
   box-sizing: border-box;
 
-  @include element('text') {
-    font-weight: 500;
-  }
 
   @include modifier('primary') {
     color: #fff;
     background-color: $primary-color;
     border-color: $primary-color;
+  }
+
+  @include modifier('large') {
+    padding: 12px 20px;
+  }
+
+  @include modifier('small') {
+    padding: 8px 16px;
   }
 }

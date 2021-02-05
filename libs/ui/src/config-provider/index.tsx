@@ -14,15 +14,6 @@ export const DEFAULT_PREFIX_CLS = 'ui'
 
 export type SizeType = 'small' | 'middle' | 'large' | undefined
 
-export interface ConfigConsumerProps {
-  getTargetContainer?: () => HTMLElement
-  getPopupContainer?: (triggerNode: HTMLElement) => HTMLElement
-  prefixCls?: string
-  getPrefixCls: (suffixCls?: string) => string
-  space?: {
-    size?: SizeType | number
-  }
-}
 
 export interface ConfigProviderProps {
   getTargetContainer?: () => HTMLElement
@@ -33,6 +24,17 @@ export interface ConfigProviderProps {
   space?: {
     size?: SizeType | number
   }
+}
+
+export interface ConfigConsumerProps {
+  getTargetContainer?: () => HTMLElement
+  getPopupContainer?: (triggerNode: HTMLElement) => HTMLElement
+  prefixCls?: string
+  getPrefixCls: (suffixCls?: string) => string
+  space?: {
+    size?: SizeType | number
+  },
+  size?: SizeType
 }
 
 const mergePrefixCls = (prefixCls: string = DEFAULT_PREFIX_CLS, suffixCls?: string) => {
@@ -51,6 +53,10 @@ const ConfigProvider = defineComponent({
       required: false,
     },
     prefixCls: String,
+    size: {
+      type: String as PropType<SizeType>,
+      required: false,
+    },
     getPrefixCls: {
       type: Function as PropType<(suffixCls?: string, customizePrefixCls?: string) => string>,
       required: false,

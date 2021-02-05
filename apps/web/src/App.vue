@@ -1,5 +1,5 @@
 <template>
-  <ui-config-provider prefix-cls="ui">
+  <ui-config-provider size="small">
     <router-view v-slot="{ Component }">
       <component :is="Component" />
     </router-view>
