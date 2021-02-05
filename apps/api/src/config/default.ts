@@ -16,5 +16,5 @@ export = {
   },
   listen: <ListenOptions>{
     port: toInteger(process.env.PORT || 7300),
-  }
+  },
 }

@@ -1,31 +1,52 @@
 <template>
-  <img src="../../assets/logo.png" alt="Vue logo" />
+  <img
+    src="../../assets/logo.png"
+    alt="Vue logo"
+  />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <br />
-  <br />
-  <p>{{ state.message }}</p>
-  <br />
-  <br />
-  <router-link to="/about">关于我们 </router-link>
+  <h1>Async data</h1>
+  <p>api 数据：{{ state.message }}</p>
+  <p>mock 数据：{{ state.user }}</p>
+  <h1>UI components</h1>
+  <ui-button>default</ui-button>&nbsp; <ui-button type="primary">primary</ui-button>&nbsp;
+  <ui-button to="/about">跳转到关于我们</ui-button>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 import axios from 'axios'
 
-import { reactive, onBeforeMount, defineProps } from 'vue'
+import { defineComponent, reactive, onBeforeMount } from 'vue'
 
 import type { Message } from 'api-interfaces'
 
 import HelloWorld from '@/components/HelloWorld.vue'
 
-const state = reactive<Message>({
-  message: ''
-})
+type State = {
+  user: any
+}
 
-onBeforeMount(() => {
-  axios.get<Message>('/api/message')
-    .then(res => {
-      state.message = res.data.message
+export default defineComponent({
+  name: 'Home',
+  components: {
+    HelloWorld,
+  },
+  setup() {
+    const state = reactive<State & Message>({
+      message: '',
+      user: {},
     })
+
+    onBeforeMount(() => {
+      axios.get('/api/user/1').then((res) => {
+        state.user = res.data
+      })
+      axios.get<Message>('/api/message').then((res) => {
+        state.message = res.data.message
+      })
+    })
+    return {
+      state,
+    }
+  },
 })
 </script>

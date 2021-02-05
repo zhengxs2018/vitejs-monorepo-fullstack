@@ -1,0 +1,29 @@
+{
+  "name": "theme-chalk",
+  "version": "0.1.0",
+  "main": "./index.js",
+  "sass": "./index.scss",
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp build",
+    "doc": "gulp doc"
+  },
+  "files": [
+    "**/*.scss",
+    "index.js"
+  ],
+  "dependencies": {
+    "sass-bem": "^2.6.5"
+  },
+  "engines": {
+    "node": ">= 12.x"
+  },
+  "author": {
+    "name": "zhengxs",
+    "email": "zhengxs2018@foxmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vue-eslint-parser": "^7.4.1"
+  }
+}

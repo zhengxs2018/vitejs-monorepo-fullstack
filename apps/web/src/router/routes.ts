@@ -6,11 +6,11 @@ export default <RouteRecordRaw[]>[
   {
     name: 'home',
     path: '/home',
-    component: Home
+    component: Home,
   },
   {
     name: 'about',
     path: '/about',
-    component: () => import('@/views/about/index.vue')
-  }
+    component: () => import('@/views/about/index.vue'),
+  },
 ]

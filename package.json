@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "start": "npm-run-all --parallel serve:api serve:web build:libs",
+    "start": "npm-run-all --parallel build:libs serve:api serve:web",
     "serve:api": "yarn workspace api serve",
     "serve:web": "yarn workspace web serve",
     "build:libs": "tsc -b -w",

@@ -39,6 +39,7 @@ $ yarn start
 - [vitejs](https://vitejs.dev/)
 - [vue.js](vue3)
 - [koa](https://koajs.com/)
+- [sass](https://sass-lang.com/)
 - [typescript](https://www.typescriptlang.org/)
 - [eslint](https://eslint.org/)
 - [prettier](https://prettier.io/)

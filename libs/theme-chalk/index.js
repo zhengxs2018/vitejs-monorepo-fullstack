@@ -1,4 +1,4 @@
-export * from './lib/api-interfaces'
+import './index.scss'
 
 export default {
   version: '__VERSION__',

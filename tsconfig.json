@@ -5,6 +5,12 @@
   "references": [
     {
       "path": "./libs/api-interfaces"
+    },
+    {
+      "path": "./libs/api-mock"
+    },
+    {
+      "path": "./libs/ui"
     }
   ]
 }

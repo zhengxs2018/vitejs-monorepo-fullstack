@@ -1,8 +1,16 @@
 {
-  "name": "api-interfaces",
+  "name": "api-mock",
   "version": "0.1.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "dependencies": {
+    "better-mock": "^0.3.1",
+    "lokijs": "^1.5.11",
+    "path-to-regexp": "^6.2.0"
+  },
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">= 12.x"
   },

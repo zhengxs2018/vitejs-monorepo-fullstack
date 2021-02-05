@@ -24,7 +24,9 @@
     "@types/koa__router": "^8.0.4",
     "@types/lodash": "^4.14.168",
     "@types/mkdirp": "^1.0.1",
-    "ts-node-dev": "^1.1.1"
+    "ts-node-dev": "^1.1.1",
+    "vite": "^2.0.0-beta.64",
+    "vue-eslint-parser": "^7.4.1"
   },
   "engines": {
     "node": ">= 12.x"

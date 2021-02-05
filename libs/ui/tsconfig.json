@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.ui.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "composite": true,
+    "importHelpers": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*", "src/**/*.vue", "typings.d.ts"],
+  "exclude": ["**/*.spec.ts"]
+}

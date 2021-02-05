@@ -1,7 +1,9 @@
 <template>
-  <router-view v-slot="{ Component }">
-    <component :is="Component" />
-  </router-view>
+  <ui-config-provider prefix-cls="ui">
+    <router-view v-slot="{ Component }">
+      <component :is="Component" />
+    </router-view>
+  </ui-config-provider>
 </template>
 
 <style>

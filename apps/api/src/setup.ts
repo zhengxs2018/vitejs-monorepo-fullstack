@@ -11,7 +11,6 @@ dotenv.config()
 process.env.NODE_CONFIG_DIR = resolve(__dirname, 'config')
 
 // 引入配置模块
-// @ts-ignore
 const config = require('config')
 
 const runDir: string = config.get('paths.runDir')
@@ -21,5 +20,11 @@ const configMeta = {
 
 mkdirp.sync(runDir)
 
-writeFileSync(join(runDir, 'application_config.json'), JSON.stringify(config, null, 2), { encoding: 'utf8' })
-writeFileSync(join(runDir, 'application_config_meta.json'), JSON.stringify(configMeta, null, 2), { encoding: 'utf8' })
+writeFileSync(join(runDir, 'application_config.json'), JSON.stringify(config, null, 2), {
+  encoding: 'utf8',
+})
+writeFileSync(
+  join(runDir, 'application_config_meta.json'),
+  JSON.stringify(configMeta, null, 2),
+  { encoding: 'utf8' },
+)

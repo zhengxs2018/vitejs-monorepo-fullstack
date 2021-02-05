@@ -1,3 +1,3 @@
 export = {
-  proxy: false
+  proxy: false,
 }

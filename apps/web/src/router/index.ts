@@ -4,14 +4,15 @@ import routes from './routes'
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: routes
+  routes: routes,
 })
 
 router.addRoute({
   path: '/',
-  redirect: '/home'
+  redirect: '/home',
 })
 
+// 仅开发时候加载
 if (import.meta.env.MODE === 'development') {
   // @ts-ignore
   window.router = router
