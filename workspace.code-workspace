@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+			"name": "app api",
+      "path": "./apps/api"
+    },
+    {
+			"name": "app web",
+      "path": "./apps/web"
+    },
+    {
+			"name": "lib api-interfaces",
+      "path": "./libs/api-interfaces"
+    },
+    {
+			"name": "root",
+      "path": "."
+    }
+  ],
+  "settings": {}
+}

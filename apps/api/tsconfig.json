@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonjs",
+    "declaration": false
+  },
+  "include": ["src/**/*", "typings.d.ts"]
+}

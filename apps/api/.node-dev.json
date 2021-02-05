@@ -1,0 +1,11 @@
+{
+  "debounce": 1000,
+  "interval": 1200,
+  "respawn": true,
+  "transpileOnly": true,
+  "preferTs ": true,
+  "notify": false,
+  "dedupe": true,
+  "prefer-ts": true,
+  "clear": true
+}

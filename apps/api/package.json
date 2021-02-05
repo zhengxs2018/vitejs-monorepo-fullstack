@@ -1,0 +1,37 @@
+{
+  "name": "api",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node -r ./dist/setup.js ./dist/main.js",
+    "inspect": "node --inspect -r ./dist/setup.js ./dist/main.js",
+    "serve": "tsnd -r ./src/setup.ts ./src/main.ts",
+    "debug": "tsnd --inspect -r ./src/setup.js ./src/main.ts"
+  },
+  "dependencies": {
+    "@koa/router": "^10.0.0",
+    "api-interfaces": "^0.1.0",
+    "config": "^3.3.3",
+    "dotenv": "^8.2.0",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "mkdirp": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/config": "^0.0.38",
+    "@types/dotenv": "^8.2.0",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa__router": "^8.0.4",
+    "@types/lodash": "^4.14.168",
+    "@types/mkdirp": "^1.0.1",
+    "ts-node-dev": "^1.1.1"
+  },
+  "engines": {
+    "node": ">= 12.x"
+  },
+  "author": {
+    "name": "zhengxs",
+    "email": "zhengxs2018@foxmail.com"
+  },
+  "license": "MIT"
+}

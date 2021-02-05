@@ -1,0 +1,58 @@
+{
+  "name": "monorepo-fullstack",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "start": "npm-run-all --parallel serve:api serve:web build:libs",
+    "serve:api": "yarn workspace api serve",
+    "serve:web": "yarn workspace web serve",
+    "build:libs": "tsc -b -w",
+    "lint": "eslint --fix \"**/*.{js,jsx,ts,tsx,vue}\"",
+    "format": "prettier --write '**/*.{js,jsx,json,tsx,ts,vue,scss,md}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,md}": [
+      "prettier --write \"**/*.{js,jsx,json,tsx,ts,vue,scss,md}\""
+    ],
+    "*.{ts,js}": [
+      "eslint --fix \"**/*.{js,jsx,ts,tsx,vue}\""
+    ]
+  },
+  "workspaces": [
+    "./apps/*",
+    "./libs/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.24",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.5.0",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "engines": {
+    "node": ">= 12.x"
+  },
+  "author": {
+    "name": "zhengxs",
+    "email": "zhengxs2018@foxmail.com"
+  },
+  "license": "MIT"
+}
